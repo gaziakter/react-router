@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter , RouterProvider} from 'react-router-dom'
 import About from './components/Pages/About.jsx'
 import Contact from './components/Pages/Contact.jsx'
+import Product from './components/Pages/Product.jsx'
 
 const router = createBrowserRouter([
 
@@ -16,9 +17,14 @@ const router = createBrowserRouter([
     path: '/about',
     element: <About></About>
   },
-      {
+  {
     path: '/contact',
     element: <Contact></Contact>
+  },
+    {
+    path: '/product',
+    loader: () => fetch('https://fakestoreapi.com/products'),
+    element: <Product></Product>
   }
     ]
   }

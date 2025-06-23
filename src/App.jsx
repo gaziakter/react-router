@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
     <div>
-      <h1>Vite + React</h1>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
     </div>
   )
 }

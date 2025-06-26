@@ -1,20 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const About = () => {
+const ConditionalStyle = () => {
 
-     const [isSpecial, setIsSpecial]= React.useState(false);
+    const [isSpecial, setIsSpecial] useState(false);
 
     const toggleButton = () => {
         setIsSpecial(!isSpecial);
     }
+
+
   return (
-    <div>
     <div>
         <button onClick={toggleButton}>Change Name</button>
         <p>{isSpecial ? 'Gazi Akter' : 'Adil Faiyaz'}</p>
     </div>
-    </div>
   )
 }
 
-export default About
+export default ConditionalStyle
